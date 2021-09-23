@@ -13,9 +13,9 @@ function App() {
         <Navbar/>
         <BrowserRouter>
 
-        <Route path="/home" exact component={Homescreen} />
-        <Route path='/login' exact component ={Loginscreen}/>
-<Route path='/register' exact component ={Registerscreen}/>
+        <Route path ="/home" exact component= {Homescreen} />
+        <Route path ='/login' exact component = {Loginscreen}/>
+<Route path = '/register' exact component = {Registerscreen}/>
 
 
         </BrowserRouter>
