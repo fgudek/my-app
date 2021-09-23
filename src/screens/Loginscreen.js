@@ -1,14 +1,39 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-function Loginscreen(){
+function Loginscreen() {
+    const [email, setemail] = useState('')
+    const [password, setpassword] = useState('')
 
-    return(
+    function Login() {
+        const user = {
+            email,
+            password,
+
+        }
+        console.log(user)
+    }
+    return (
 
         <div>
-        <h1>Login</h1>
-        
+            <div className="row justify-content-center mt-5">
+                <div className="col-md-5"></div>
+
+
+                <div className='bs'>
+                    <h1>Prijava</h1>
+                    <input type="text" className="form-control" placeholder="email" value={email} onChange={(e) => { setemail(e.target.value) }} />
+
+                    <input type="text" className="form-control" placeholder="password" value={password} onChange={(e) => { setpassword(e.target.value) }} />
+
+                    <button className='btn btn-primary mt-3' onClick={Login}>Prijava</button>
+
+
+                </div>
+            </div>
         </div>
-        )
+
+    )
+
 
 }
 

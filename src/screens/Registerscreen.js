@@ -1,30 +1,40 @@
-import React , {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from "axios";
+
 
 function Registerscreen() {
-const [name, setname] =useState ('')
-const [email, setemail] =useState ('')
-const [password, setpassword] =useState ('')
-const [cpassword, setcpassword] =useState ('')
+    const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [password, setpassword] = useState('')
+    const [cpassword, setcpassword] = useState('')
 
-function register(){
+    async function register() {
 
-    if(password==cpassword){
-const user ={
-name,
-email,
-password,
-cpassword
+        if (password == cpassword) {
+            const user = {
+                name,
+                email,
+                password,
+                cpassword
 
 
-}
-console.log(user)
+            }
+         try{
+                const resoult = await axios.post('/api/users/register', user).data
+
+
+         }catch (error){
+console.log(error)
+
+
+         }
+        }
+        else {
+            alert(' Lozinke se ne podudaraju!')
+
+
+        }
     }
-else{
-alert('Password not matched')
-
-
-}
-}
 
     return (
 
@@ -33,23 +43,23 @@ alert('Password not matched')
                 <div className="col-md-5"></div>
 
 
-                <div>
+                <div className='bs'>
                     <h1>Registracija</h1>
-                    <input type="text" className="form-control" placeholder="name" value={name} onChange={(e)=>{setname(e.target.value)}}/>
-                    <input type="text" className="form-control" placeholder="email"value={email} onChange={(e)=>{setemail(e.target.value)}}/>
+                    <input type="text" className="form-control" placeholder="name" value={name} onChange={(e) => { setname(e.target.value) }} />
+                    <input type="text" className="form-control" placeholder="email" value={email} onChange={(e) => { setemail(e.target.value) }} />
 
-                    <input type="text" className="form-control" placeholder="password" value={password} onChange={(e)=>{setpassword(e.target.value)}}/>
+                    <input type="text" className="form-control" placeholder="password" value={password} onChange={(e) => { setpassword(e.target.value) }} />
 
-                    <input type="text" className="form-control" placeholder="confrm password" value={cpassword} onChange={(e)=>{setcpassword(e.target.value)}}/>
+                    <input type="text" className="form-control" placeholder="confrm password" value={cpassword} onChange={(e) => { setcpassword(e.target.value) }} />
 
-<button className='btn btn-primary' onClick={register}>Registracija</button>
+                    <button className='btn btn-primary mt-3' onClick={register}>Registracija</button>
 
 
                 </div>
             </div>
         </div>
 
-)
+    )
 
 
 }
