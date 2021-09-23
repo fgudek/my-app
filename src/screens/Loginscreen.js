@@ -3,7 +3,7 @@ import React from 'react'
 function Loginscreen(){
 
 <div>
-<h1>Registracija</h1>
+<h1>Login</h1>
 
 
 </div>
