@@ -9,19 +9,15 @@ function Registerscreen() {
     const [cpassword, setcpassword] = useState('')
 
     async function register() {
-
         if (password == cpassword) {
             const user = {
                 name,
                 email,
                 password,
                 cpassword
-
-
             }
          try{
                 const resoult = await axios.post('/api/users/register', user).data
-
 
          }catch (error){
 console.log(error)
