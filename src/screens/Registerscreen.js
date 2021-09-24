@@ -17,7 +17,7 @@ function Registerscreen() {
                 cpassword
             }
          try{
-                const resoult = await axios.post('/api/users/register', user).data
+                const result = await axios.post('/api/users/register', user).data
 
          }catch (error){
 console.log(error)
