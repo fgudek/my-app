@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Teren from "../components/Teren";
+import Loader from "../components/Loader";
+import Error from "../components/Error";
 function Homescreen() {
   const [tereni, settereni] = useState([]);
   const [loading, setloading] = useState();
@@ -20,18 +22,20 @@ function Homescreen() {
   }, []);
 
   return (
-    <div className='container'>
-      <div className="row justify-content-center mt-5">
+    <div className="container">
+      <div className="row justify-content-center mt-5 ">
         {loading ? (
-          <h1>Loading...</h1>
-        ) : error ? (
-          <h1>Error</h1>
-        ) : (
+          <Loader/>
+        ) : tereni ? (
           tereni.map((teren) => {
-            return <div className="col-md-9">
-              <Teren teren={teren}/>
-            </div>
+            return (
+              <div className="col-md-9 mt-3">
+                <Teren teren={teren} />
+              </div>
+            );
           })
+        ) : (
+          <Error/>
         )}
       </div>
     </div>
