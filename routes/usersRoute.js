@@ -1,16 +1,13 @@
 const express = require("express");
-const { useState } = require("react");
 const router = express.Router();
 const User = require("../models/user")
 
-
-
 router.post("/register", async (req, res) => {
-    const newuser = new User({ name: req.body.name, email: req.body.email, password: req.body.password })
+    const newuser = new User({name: req.body.name ,email: req.body.email, password: req.body.password })
 
     try {
 
-        const newuser = await newuser.save()
+        const user = await newuser.save()
         res.send('Registracija uspješna')
     } catch (error) {
         return res.status(400).json({ erorr })
@@ -33,4 +30,4 @@ router.post("/login", async (req, res) => {
         return res.status(400).json({ error });
     }
 });
-module.exports=router
+module.exports = router
