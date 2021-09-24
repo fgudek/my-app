@@ -14,4 +14,17 @@ router.get("/getalltereni", async(req,res) => {
 
 });
 
+router.post("/getterenbyid", async(req,res) => {
+    
+    const terenid = req.body.terenid
+
+    try {
+        const teren = await Teren.findOne({_id : terenid})
+        res.send(teren)
+    } catch (error) {
+        return res.status(400).json({ message: error });
+    }
+
+});
+
 module.exports = router;

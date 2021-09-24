@@ -5,6 +5,7 @@ const app = express();
 const dbConfig = require('./db')
 const tereniRoute = require('./routes/tereniRoute')
 
+app.use(express.json())
 
 app.use('/api/tereni', tereniRoute)
 
