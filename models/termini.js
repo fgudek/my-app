@@ -7,35 +7,7 @@ const terminiSchema = mongoose.Schema({
 
 
     name:{
-        type: String,
-        required: true
-    },
-    name: {
-        type: String,
-        required: true
-    },
-    type: {
-        type: String,
-        required: true
-    },
-    imageurls:[],
-    description: {
-        type: String,
-        required: true
-    },
-    price: {
-        type: Number,
-        required: true
-    },
-    phonenumber: {
-        type: Number, 
-        required: true
-    },    
-    currentbookings: [],
-    information: {
-        type: String,
-        required: true
-    }
+      
 }, { collection : 'tereni' });
 
 const terenModel = mongoose.model('teren', terenSchema)

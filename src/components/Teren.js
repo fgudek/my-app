@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import {Modal, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
-function Teren({teren}) {
+function Teren({teren, stime, etime}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -22,7 +22,7 @@ function Teren({teren}) {
         </b>
 
         <div style={{ float: "right" }}>
-          <Link to={`/reservation/${teren._id}`}>
+          <Link to={`/reservation/${teren._id}/${stime}/${etime}`}>
             <button className='btn btn primary m-2'>
               Rezerviraj sada
             </button>
