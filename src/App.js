@@ -13,8 +13,8 @@ function App() {
         <BrowserRouter>
 
         <Route path="/home" exact component={Homescreen} />
-        <Route path="/reservation/:terenid" exact component={Reservationscreen} />
-        <Route path ="/login"exact component = {Loginscreen} />
+        <Route path="/reservation/:terenid/:stime/:etime" exact component={Reservationscreen} />
+        <Route path ="/login" exact component = {Loginscreen} />
         <Route path ="/register" exact component = {Registerscreen} />
         </BrowserRouter>
     </div>
