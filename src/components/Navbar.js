@@ -14,7 +14,7 @@ window.location.href='/login'
     <div>
       <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
-          Rezervacija sportskih terena
+          Book-a-Court
         </a>
         <button
           class="navbar-toggler"

@@ -5,13 +5,13 @@
     margin: auto;
     margin-top: -10rem;
     position: relative;
-    background-color:   #86a013;
+    background-color:   #eceee2;
     color: rgb(156, 4, 4);
     border-radius: 14px;
     padding: 1rem;
     box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
   
