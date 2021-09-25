@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import PropagateLoader from "react-spinners/PropagateLoader";
 function Loader() {
-  let [loading, setLoading] = useState(true);
+  let [loading, setloading] = useState(true);
 
   return (
     <div style={{marginTop:'150px'}}>

@@ -1,13 +1,13 @@
 import React from "react";
 
-function Error() {
+function Error({message}) {
   return (
     <div>
       <div class="alert alert-danger" role="alert">
-        Nešto je pošlo po zlu, molimo probajte doći kasnije.
+        {message}
       </div>
     </div>
-  );
+  )
 }
 
-export default Error;
+export default Error

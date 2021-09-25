@@ -3,6 +3,8 @@ import axios from "axios";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import moment from 'moment'
+// import Loader from "react-spinners/PropagateLoader";
+import StripeCheckout from 'react-stripe-checkout';
 
 
 function Reservationscreen({match}) {
@@ -30,7 +32,7 @@ function Reservationscreen({match}) {
   }, []);
 
   return (
-    <div className='m-5'>
+    <div className="m-55" >
       {loading ? (<Loader/>): teren ? (<div>
 
         <div className="row justify-content-center mt-5 bs">
@@ -65,6 +67,9 @@ function Reservationscreen({match}) {
               <div style={{float:'right'}}> 
                 
                 <button className="btn btn-primary">Placanje </button>
+
+
+          
 
               </div>
               
