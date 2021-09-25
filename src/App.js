@@ -10,6 +10,7 @@ import BookACourtSummary from "./components/BookACourtSummary";
 
 
 function App() {
+
   return (
     <div className="App">
         <Navbar/>
@@ -22,7 +23,6 @@ function App() {
         <Route path ="/login"exact component = {Loginscreen} />
         <Route path ="/register" exact component = {Registerscreen} />
         </BrowserRouter>
-
 
 
     </div>
