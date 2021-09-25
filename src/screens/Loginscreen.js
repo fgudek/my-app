@@ -34,10 +34,10 @@ function Loginscreen() {
     }
     return (
 
-        <div>
+        <div class="prijavadiv">
            
 
-            <div className="row justify-content-center mt-5">
+            <div className="row justify-content-center mt-10 ">
                 <div className="col-md-5"></div>
                 {loading && (<Loader />)}
 

@@ -54,7 +54,7 @@ function Registerscreen() {
 
     return (
 
-        <div>
+        <div class="rezdiv">
 
             {loading && (<Loader />)}
             {error && (<Error />)}
