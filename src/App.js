@@ -6,6 +6,7 @@ import Reservationscreen from './screens/Reservationscreen';
 import Loginscreen from './screens/Loginscreen'
 import Registerscreen from './screens/Registerscreen'
 
+
 function App() {
   return (
     <div className="App">
@@ -17,7 +18,13 @@ function App() {
         <Route path ="/login"exact component = {Loginscreen} />
         <Route path ="/register" exact component = {Registerscreen} />
         </BrowserRouter>
+
+
     </div>
+
+
+
+
   );
 }
 
