@@ -31,6 +31,15 @@ function Reservationscreen({match}) {
     }
   }, []);
 
+
+function onToken(token){
+  console.log(token)
+}
+
+
+
+
+
   return (
     <div className="m-55" >
       {loading ? (<Loader/>): teren ? (<div>
@@ -66,9 +75,16 @@ function Reservationscreen({match}) {
               
               <div style={{float:'right'}}> 
                 
-                <button className="btn btn-primary">Placanje </button>
 
+                <StripeCheckout
+        token={onToken}
+        stripeKey="pk_test_51JdfXJCebNsEqN290W7Qu9LCqgrdFjDDLR73xowhjHxUj2d8rEwnKduhemRAhbiohYN3PjKmr4gixybBwACWBqM4004YE9mtvo">
+       
+      
+      <button className="btn btn-primary">Placanje {""} </button>
 
+     </StripeCheckout>
+          
           
 
               </div>

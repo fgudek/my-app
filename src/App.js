@@ -16,7 +16,8 @@ function App() {
         <Navbar/>
         
         <BrowserRouter>
-        <BookACourtSummary />
+       
+        <Route path="/" exact component={BookACourtSummary} />
 
         <Route path="/home" exact component={Homescreen} />
         <Route path="/reservation/:terenid/:stime/:etime" exact component={Reservationscreen} />
