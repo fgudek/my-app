@@ -54,18 +54,37 @@ function filterByTime(times){
   return (
     <div className="container">
       <div className="row mt-5">
+      <div className="col-md-5">
+<input type="text" className='form-control' placeholder='Pretraga terena'/>
+
+<select className="form-control">
+<option value="All">Svi tereni</option>
+<option value="Nogomet">Nogomet</option>
+<option value="Košarka">Košark</option>
+<option value="Tenis">Tenis</option>
+
+</select>
+
+</div>
+
+
         
-      <div className='row mt-2'>
-        <div className="col-md-4">
+      <div className='row mt-2' class="naziv">
+        <div className="col-md-4 bs">
+        <h1> Odaberi vrijeme za koje želiš rezervirati teren</h1>
 
         <TimePicker.RangePicker format='HH:mm' onChange={filterByTime} />
 
         </div>
 
       </div>
-
-
+    
       </div>
+
+
+
+
+
 
 
       <div className="row justify-content-center mt-5 ">

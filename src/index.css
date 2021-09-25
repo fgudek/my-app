@@ -58,10 +58,13 @@ h1 {
   width: 100% !important;
   border-radius: 5px !important;
 }
-input{
+input ,select{
 box-shadow:none !important;
 margin-top:10px;
 border: 1px solid rgb(5, 58, 27) !important;
+width:100% !important;
+
+
 }
 
 .dropdown-toggle{
@@ -88,4 +91,16 @@ border: 1px solid rgb(5, 58, 27) !important;
   transform: translate(-60%, -60%);
   background-color: rgb(110, 195, 110) !important
 
+}
+.col-md-4 {
+  width:100% !important;
+margin-top: auto;
+}
+.container{
+  width:100% !important;
+
+}
+.naziv{
+ 
+  width:100% !important;
 }

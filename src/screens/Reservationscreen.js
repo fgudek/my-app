@@ -46,10 +46,20 @@ function onToken(token){
 
         <div className="row justify-content-center mt-5 bs">
             <div class="col-md-5">
+
+
+
+
               <h1>{teren.name}</h1>
               <img src={teren.imageurls[1]} className='bigimg'/>
 
             </div>
+
+
+
+
+
+
             <div class="col-md-6">
               <div style={{textAlign:'right'}}>
               <h1>Detalji rezervacije</h1>
