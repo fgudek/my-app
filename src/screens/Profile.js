@@ -21,7 +21,7 @@ window.location.href='/login'
 
     return(
         <div class="profil">
-    <h1 class= "prof"> Moj profil</h1>
+    <h1 class= "prof"> Osobni podaci</h1>
     <br/>
 
    <h1>Ime :{user.name}   </h1> 

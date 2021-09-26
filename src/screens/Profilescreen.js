@@ -13,7 +13,7 @@ return(
 
 <ul class="nav nav-pills nav-fill">
   <li class="nav-item">
-    <a class="nav-link active" href="/Pro" >Moji podaci</a>
+    <a class="profilee" href="/Pro" >Moji podaci</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/Rezervacije">Rezervacije</a>

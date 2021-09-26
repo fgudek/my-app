@@ -50,7 +50,9 @@ function Loginscreen() {
                     <input type="text" className="form-control" placeholder="password" value={password} onChange={(e) => { setpassword(e.target.value) }} />
 
                     <button className='btn btn-primary mt-3' onClick={Login}>Prijava</button>
-
+                    <a class="nav-link" href="\register">
+                    Nemaš profil. Registraraj se.
+                  </a>
 
                 </div>
             </div>
