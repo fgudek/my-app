@@ -43,7 +43,7 @@ window.location.href='/login'
                   <i class="fa fa-user"></i> {user.name}
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Rezervacije</a>
+                    <a class="dropdown-item" href="/profile">Profil</a>
                     <a class="dropdown-item" href="#" onClick={logout}>Odjava</a>
                   </div>
                 </div>

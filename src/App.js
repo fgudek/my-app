@@ -7,6 +7,9 @@ import Loginscreen from './screens/Loginscreen'
 import Registerscreen from './screens/Registerscreen'
 import BookACourtSummary from "./components/BookACourtSummary";
 import background from "./img/placeholder.png";
+import Profilescreen from './screens/Profilescreen';
+import Profile from './screens/Profile';
+import MojeRezervacije from './screens/MojeRezervacije';
 
 
 function App() {
@@ -22,6 +25,10 @@ function App() {
         <Route path="/reservation/:terenid/:stime/:etime" exact component={Reservationscreen} />
         <Route path ="/login" exact component = {Loginscreen} />
         <Route path ="/register" exact component = {Registerscreen} />
+        <Route path ="/profile" exact component = {Profilescreen} />
+        <Route path ="/Pro" exact component = {Profile} />
+        <Route path ="/Rezervacije" exact component = {MojeRezervacije} />
+
         </BrowserRouter>
 
        
