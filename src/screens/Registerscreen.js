@@ -3,7 +3,8 @@ import axios from "axios";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Success from '../components/Success';
-
+const stripe =require('stripe')('sk_test_51JdfXJCebNsEqN29hNR5sCr5SfJmvqaU2I3SbFpJ8CZswY2U3yI71owW13vY2iIau8BxErT7SX8aAcTB6bDDfuFl00AjsXsRmF')
+const { v4: uuidv4 } = require('uuid');
 
 
 
@@ -74,6 +75,9 @@ function Registerscreen() {
                     <input type="text" className="form-control" placeholder="confrm password" value={cpassword} onChange={(e) => { setcpassword(e.target.value) }} />
 
                     <button className='btn btn-primary mt-3' onClick={register}>Registracija</button>
+                    <a class="nav-link" href="\login">
+                    Prijavi se
+                  </a>
 
 
                 </div>

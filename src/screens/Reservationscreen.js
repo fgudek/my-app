@@ -34,14 +34,14 @@ function Reservationscreen({match}) {
 async function bookCourt(){
 const bookingDetails = {
 teren,
-user: JSON.parse(localStorage.getItem('currentUser'))._id,
+userid: JSON.parse(localStorage.getItem('currentUser'))._id,
 stime,
 etime,
 totalhours
 
 }
 try{
-  const resuli=await axios.post ('/api/bookings/bookCourt', bookingDetails)
+  const resuli=await axios.post('/api/bookings/reservation', bookingDetails)
 }catch(error){
 
 }

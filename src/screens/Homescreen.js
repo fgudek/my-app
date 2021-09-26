@@ -21,11 +21,12 @@ function Homescreen() {
   const [error, seterror] = useState();
 
 const [searchkey, setsearchkey]=useState('')
+
 const[type, settype]=useState('all')
  
 const[stime, setstime] = useState()
 const[etime, setetime] = useState()
-const[duplicatesports,setduplicatesports]=useState([]);
+const[duplicatetereni, setduplicatetereni]=useState([]);
 
 
 
@@ -58,15 +59,18 @@ function filterByTime(times){
 
 
 function filterBySearch(){
-const tempsports = duplicatesports.filter(teren=>teren.name.toLowerCase().includes(searchkey.toLowerCase()))
+const temptereni = duplicatetereni.filter(teren=>teren.description.toLowerCase().includes(searchkey.toLowerCase()))
 
-
-settereni(tempsports)
+settereni(temptereni)
 
 }
 
 
+function filterByType(e){
 
+const temptereni=tereni.filter(teren=>teren.type.toLowerCase()==e.toLowerCase())
+
+}
 
 
 
@@ -76,10 +80,11 @@ settereni(tempsports)
       <div className="col-md-5">
 <input type="text" className='form-control' placeholder='Pretraga terena' value={searchkey} onChange={(e)=>{setsearchkey(e.target.value)}} onKeyUp={filterBySearch}/>
 
-<select className="form-control" >
-<option value="All">Svi tereni</option>
+<select className="form-control" value={type} onChange={(e)=> {filterByType(e.target.value)}}>
+
+<option value="all">Svi tereni</option>
 <option value="Nogomet">Nogomet</option>
-<option value="Košarka">Košark</option>
+<option value="Kosarka">Košarka</option>
 <option value="Tenis">Tenis</option>
 
 </select>

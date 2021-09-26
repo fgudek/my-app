@@ -14,15 +14,15 @@ userid:{
 
 },
 stime:{
-    type:String, required:true
+    type:Number, required:true
 
 },
 etime:{
-    type:String, required:true
+    type:Number, required:true
 
 },
 totalhours:{
-    type:String, required:true
+    type:Number, required:true
 
 },
 transactionId:{

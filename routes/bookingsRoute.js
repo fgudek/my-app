@@ -1,16 +1,37 @@
-const express =require("express");
+const express = require("express");
+const { default: Stripe } = require("stripe");
 const router =express.Router();
 const Booking=require("../models/booking")
 
-router.post("/bookCourt", async(req,res)=> {
+router.post("/reservation", async(req,res)=> {
 
 const {
     teren,
 userid,
 stime,
 etime,
-totalhours
+totalhours,
+token
 }=req.body
+
+
+
+try{
+
+const custumer=await stripe.customer.create({
+    email:token.email,
+    source:token.id,
+    
+ } )
+
+
+
+
+}catch (error){
+
+}
+
+
 
 
 try{
