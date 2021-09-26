@@ -41,7 +41,7 @@ totalhours
 
 }
 try{
-  const resuli=await axios.post ('/api/bookings/rezervation', bookingDetails)
+  const resuli=await axios.post ('/api/bookings/bookCourt', bookingDetails)
 }catch(error){
 
 }
@@ -92,7 +92,7 @@ function onToken(token){
               <hr />
               
               <b>
-              <p>Name: </p>
+              <p>Name: {teren.name}</p>
               <p>Date:  </p>
               <p>Početak termina: {match.params.stime} </p>
               <p>Kraj termina: {match.params.etime} </p>   

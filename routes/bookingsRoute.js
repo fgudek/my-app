@@ -2,7 +2,7 @@ const express =require("express");
 const router =express.Router();
 const Booking=require("../models/booking")
 
-router.post("/reservation", async(req,res)=> {
+router.post("/bookCourt", async(req,res)=> {
 
 const {
     teren,
@@ -28,7 +28,7 @@ transactionId:'1234'
 res.send('Rezervacija uspješna')
 
 }catch(error){
-return res.status(400).json({error})}
+return res.status(400).json()}
 
 
 
