@@ -31,8 +31,27 @@ function Reservationscreen({match}) {
     }
   }, []);
 
+async function bookCourt(){
+const bookingDetails = {
+teren,
+user: JSON.parse(localStorage.getItem('currentUser'))
+
+}
+
+
+}
+
+
+
+
+
 
 function onToken(token){
+
+
+
+
+  
   console.log(token)
 }
 
@@ -91,7 +110,7 @@ function onToken(token){
         stripeKey="pk_test_51JdfXJCebNsEqN290W7Qu9LCqgrdFjDDLR73xowhjHxUj2d8rEwnKduhemRAhbiohYN3PjKmr4gixybBwACWBqM4004YE9mtvo">
        
       
-      <button className="btn btn-primary">Placanje {""} </button>
+      <button className="btn btn-primary" onClick={bookCourt}>Placanje {""} </button>
 
      </StripeCheckout>
           

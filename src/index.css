@@ -58,11 +58,15 @@ h1 {
   width: 100% !important;
   border-radius: 5px !important;
 }
-input ,select{
+input ,select, .ant-picker, .ant-picker-input {
 box-shadow:none !important;
 margin-top:10px;
 border: 1px solid rgb(5, 58, 27) !important;
 width:100% !important;
+display: block;
+color: rgb(177, 68, 68);
+margin-left: auto;
+    margin-right: auto;
 
 
 }
@@ -95,12 +99,34 @@ width:100% !important;
 .col-md-4 {
   width:100% !important;
 margin-top: auto;
+display: block;
+
+margin-left: auto;
+    margin-right: auto;
 }
 .container{
   width:100% !important;
+  display: block;
+
+margin-left: auto;
+    margin-right: auto;
 
 }
 .naziv{
  
   width:100% !important;
+  color: rgb(235, 142, 142);
+  display: block;
+
+margin-left: auto;
+    margin-right: auto;
+}
+
+.col-md-5 {
+  width:100% !important;
+margin-top: auto;
+display: block;
+
+margin-left: auto;
+    margin-right: auto;
 }

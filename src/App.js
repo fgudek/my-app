@@ -6,7 +6,7 @@ import Reservationscreen from './screens/Reservationscreen';
 import Loginscreen from './screens/Loginscreen'
 import Registerscreen from './screens/Registerscreen'
 import BookACourtSummary from "./components/BookACourtSummary";
-
+import background from "./img/placeholder.png";
 
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
         <Navbar/>
-        
         <BrowserRouter>
        
         <Route path="/" exact component={BookACourtSummary} />
@@ -25,9 +24,14 @@ function App() {
         <Route path ="/register" exact component = {Registerscreen} />
         </BrowserRouter>
 
+       
 
+        <div style={{ backgroundImage: `url(${background})` }}>
     </div>
 
+
+    </div>
+    
 
 
 

@@ -20,9 +20,14 @@ function Homescreen() {
   const [loading, setloading] = useState();
   const [error, seterror] = useState();
 
+const [searchkey, setsearchkey]=useState('')
+const[type, settype]=useState('all')
  
 const[stime, setstime] = useState()
 const[etime, setetime] = useState()
+const[duplicatesports,setduplicatesports]=useState([]);
+
+
 
   useEffect(async () => {
     try {
@@ -51,13 +56,27 @@ function filterByTime(times){
 // const end   = new Date(2012, 4, 23);
 // const range = moment.range(start, end);
 
+
+function filterBySearch(){
+const tempsports = duplicatesports.filter(teren=>teren.name.toLowerCase().includes(searchkey.toLowerCase()))
+
+
+settereni(tempsports)
+
+}
+
+
+
+
+
+
   return (
     <div className="container">
       <div className="row mt-5">
       <div className="col-md-5">
-<input type="text" className='form-control' placeholder='Pretraga terena'/>
+<input type="text" className='form-control' placeholder='Pretraga terena' value={searchkey} onChange={(e)=>{setsearchkey(e.target.value)}} onKeyUp={filterBySearch}/>
 
-<select className="form-control">
+<select className="form-control" >
 <option value="All">Svi tereni</option>
 <option value="Nogomet">Nogomet</option>
 <option value="Košarka">Košark</option>
@@ -69,7 +88,7 @@ function filterByTime(times){
 
 
         
-      <div className='row mt-2' class="naziv">
+      <div className='row mt-2' class="naziv" >
         <div className="col-md-4 bs">
         <h1> Odaberi vrijeme za koje želiš rezervirati teren</h1>
 
@@ -90,7 +109,7 @@ function filterByTime(times){
       <div className="row justify-content-center mt-5 ">
         {loading ? (
           <Loader/>
-        ) : tereni ? (
+        ) :  (
           tereni.map((teren) => {
             return (
               <div className="col-md-9 mt-3">
@@ -98,9 +117,7 @@ function filterByTime(times){
               </div>
             );
           })
-        ) : (
-          <Error/>
-        )}
+        ) }
       </div>
     </div>
   );
