@@ -7,6 +7,7 @@ import Error from "../components/Error";
 import moment from 'moment'
 // import { DatePicker, Space } from 'antd';
 import { TimePicker } from 'antd';
+import ReactDOM from 'react-dom'
 
 // function onChangee(date, dateString) {
 //   console.log(date, dateString);
@@ -20,13 +21,13 @@ function Homescreen() {
   const [loading, setloading] = useState();
   const [error, seterror] = useState();
 
-const [searchkey, setsearchkey]=useState('')
+const [searchkey, setSearchKey]=useState('')
 
 const[type, settype]=useState('all')
  
 const[stime, setstime] = useState()
 const[etime, setetime] = useState()
-const[duplicatetereni, setduplicatetereni]=useState([]);
+const[duplicatetereni, setduplicatetereni]=useState([])
 
 
 
@@ -36,6 +37,7 @@ const[duplicatetereni, setduplicatetereni]=useState([]);
       const data = (await axios.get("/api/tereni/getalltereni")).data;
 
       settereni(data);
+      setduplicatetereni(data);
       setloading(false);
     } catch (error) {
       seterror(true);
@@ -59,7 +61,7 @@ function filterByTime(times){
 
 
 function filterBySearch(){
-const temptereni = duplicatetereni.filter(teren=>teren.description.toLowerCase().includes(searchkey.toLowerCase()))
+const temptereni = duplicatetereni.filter(teren=>teren.type.toLowerCase().includes(searchkey.toLowerCase()))
 
 settereni(temptereni)
 
@@ -74,13 +76,15 @@ const temptereni=tereni.filter(teren=>teren.type.toLowerCase()==e.toLowerCase())
 
 
 
+
+
+
   return (
     <div className="container">
       <div className="row mt-5">
       <div className="col-md-5">
-<input type="text" className='form-control' placeholder='Pretraga terena' value={searchkey} onChange={(e)=>{setsearchkey(e.target.value)}} onKeyUp={filterBySearch}/>
 
-<select className="form-control" value={type} onChange={(e)=> {filterByType(e.target.value)}}>
+<select className='form-control' value={type} onChange={(e)=> {filterByType(e.target.value)}}>
 
 <option value="all">Svi tereni</option>
 <option value="Nogomet">Nogomet</option>
@@ -88,7 +92,13 @@ const temptereni=tereni.filter(teren=>teren.type.toLowerCase()==e.toLowerCase())
 <option value="Tenis">Tenis</option>
 
 </select>
-
+ <input type="text" className='form-control' 
+        placeholder='Pretraga terena' 
+        alue={searchkey} 
+        onChange={(e)=>
+        {setSearchKey(e.target.value)}} 
+        onKeyUp={filterBySearch}
+        />
 </div>
 
 
@@ -100,6 +110,10 @@ const temptereni=tereni.filter(teren=>teren.type.toLowerCase()==e.toLowerCase())
         <TimePicker.RangePicker format='HH:mm' onChange={filterByTime} />
 
         </div>
+
+      
+       
+
 
       </div>
     
@@ -127,5 +141,7 @@ const temptereni=tereni.filter(teren=>teren.type.toLowerCase()==e.toLowerCase())
     </div>
   );
 }
+
+
 
 export default Homescreen;
