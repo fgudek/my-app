@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Getting Started with Create React App - Rezervacija terena
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Image of the app
+
+![screenshot](https://user-images.githubusercontent.com/90222667/137011853-7f947a60-4683-4859-b99f-ea357aabbdd0.jpg)
 
 ## Available Scripts
 
